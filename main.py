@@ -25,9 +25,7 @@ exercise_headers = {
     "x-app-id": APP_ID,
     "x-app-key": API_KEY,
 }
-
 exercise_input = input("Describe exercise: ")
-
 data = {
     "query": exercise_input,
     "gender": GENDER,
@@ -53,6 +51,5 @@ sheetyBody = {
 sheetyHeader = {
     "Authorization": f"Bearer {AUTH_KEY}",
 }
-
 sheetyResponse = requests.post(url=SHEETY_ENDPOINT, json=sheetyBody, headers=sheetyHeader)
 print(sheetyResponse.text)
